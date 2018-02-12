@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row content">
+    <div class="col-md-12 row title">COMPANIES I HAVE WORKED FOR</div>
+    <div class="work-experience col-md-12 row">
+      <div *ngFor="let job of jobs;" class="col-md-4">
+        <div class="work-card">
+          <div class="front">
+            <div class="card">
+              <!--<img class="card-img-top logo" src="../../assets/logos/{{job.logo}}" alt="logo">-->
+              <div class="card-body">
+                <h5 class="card-title">{{job.organization}}, {{job.location}}</h5>
+                <p class="card-text">{{job.designation}}</p>
+                <p class="card-text"><small class="text-muted">{{job.joiningYear}} - {{job.leavingYear}}</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="back">
+            <div class="card">
+              <div class="card-body">
+                <img class="logo" src="../../assets/logos/{{job.logo}}" alt="logo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-md-12 row title">TECHNOLOGIES I HAVE WORKED WITH</div>
+    <div class="skills col-md-12 row">
+      <div class="skill-box" *ngFor="let skill of skills;">
+        <i class="devicon-{{skill.id}}-plain {{skill.class}}" [style.color]="skill.color"></i>
+        <span class="skill-text" [style.background-color]="skill.color">{{skill.name}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

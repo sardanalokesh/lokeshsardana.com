@@ -1,0 +1,104 @@
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  display: block;
+  font-weight: 300;
+}
+
+.logo {
+  height: 4rem;
+  width:  15rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  height: inherit;
+}
+
+.card-body {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-experience, .skills {
+  margin-top: 25px;
+  margin-bottom: 75px;
+}
+
+.work-card {
+  height: 170px;
+  width: 280px;
+  padding-left: 0;
+  padding-right: 0;
+  transition:transform 1s, box-shadow .3s ease-in-out;
+  transform-style: preserve-3d;
+  border-radius: 0.25rem;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+  &:hover {
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+
+
+  .front, .back {
+    height: inherit;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  &:hover {
+    transform: rotateY(180deg);
+  }
+}
+
+.skill-box {
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .skill-text {
+    display: none;
+    height: inherit;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  i {
+    display: block;
+  }
+}
+
+.skill-box:hover {
+  i {
+    display: none;
+  }
+
+  .skill-text {
+    display: block;
+  }
+}

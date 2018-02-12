@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row content">
+    <div class="col-md-12 title">LET'S CONNECT</div>
+    <div class="col-md-12 mediums">
+      <div *ngFor="let medium of mediums;" class="medium">
+        <a class="devicon-{{medium.id}}-plain colored" href="{{medium.url}}" target="_blank">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

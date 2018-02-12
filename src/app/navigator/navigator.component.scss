@@ -1,0 +1,102 @@
+$hoverColor: #C33;
+$menuIconColor: #9E9E9E;
+
+:host {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  border-right: 1px solid #EEE;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu {
+  padding-left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-item {
+  position: relative;
+  list-style: none;
+  height: 90px;
+  cursor: pointer;
+}
+
+.menu-item.active,.menu-item:hover {
+  .menu-icon {
+    .line {
+      border-color: $hoverColor;
+    }
+
+    .icon {
+      .fa {
+        color: $hoverColor;
+      }
+    }
+  }
+
+  .menu-title {
+    color: $hoverColor;
+  }
+}
+
+.menu-icon {
+  .line {
+    position: absolute;
+    display: inline-block;
+    width: 30%;
+    border-top: 2px solid $menuIconColor;
+    margin-top: 5px;
+  }
+
+  .right {
+    right: 0px;
+  }
+
+  .left {
+    left: 0px;
+  }
+
+  .icon {
+    position: absolute;
+    display: inline-block;
+    width: 20%;
+    height: 20px;
+    left: 50%;
+    margin-left: -10%;
+    margin-top: -5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+
+    .fa {
+      font-size: 20px;
+      color: $menuIconColor;
+    }
+  }
+}
+
+.menu-title {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

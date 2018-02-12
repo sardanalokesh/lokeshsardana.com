@@ -1,0 +1,15 @@
+$highlight-color: #C33;
+
+.content {
+  margin-right: 50px;
+  margin-left: 50px;
+
+  .text-content {
+    margin-top: 50px;
+    text-align: justify;
+
+    a {
+      color: $highlight-color;
+    }
+  }
+}

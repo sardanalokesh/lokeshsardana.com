@@ -1,0 +1,54 @@
+.heading {
+  text-align: center;
+
+  .title {
+    font-size: 2.5rem;
+    font-family: "din-condensed-web","Trebuchet MS","Arial Narrow",Arial,sans-serif;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    font-family: "ff-tisa-web-pro",Palatino," Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+}
+
+figure {
+  display: inline-block;
+  position: relative;
+  -moz-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+  float: right;
+  margin-top: 50px;
+
+  img {
+    border-color: white /* for an acceptable IE result*/;
+    border-width: 15px;
+    -moz-border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+    border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+    border-style: solid;
+    margin: auto;
+    height: 350px;
+  }
+
+  img.hasCaption {
+    padding-bottom: 50px;
+  }
+
+  figcaption {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 16px;
+    background-color: white;
+    text-align: center;
+    color: blue;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 30px;
+    padding: 10px;
+  }
+
+}

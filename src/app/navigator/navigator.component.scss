@@ -99,4 +99,8 @@ $menuIconColor: #9E9E9E;
   position: absolute;
   bottom: 0;
   width: 100%;
+
+  a:hover {
+    text-decoration: none;
+  }
 }

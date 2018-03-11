@@ -1,8 +1,40 @@
 <div class="container">
   <div class="row content">
-    <div class="col-md-12 row title">Experiments</div>
-    <div class="col-md-12 row experiments">
-      <div *ngFor="let experiment of experiments;" class="experiment">
+    <div class="col-md-12 row title">MY EXPERIMENTS WITH CODE</div>
+    <div class="cards-section col-md-12 row">
+      <div *ngFor="let experiment of experiments;" class="col-md-4" style="margin-top: 10px;">
+        <div class="experiment-card" (click)="experiment.click()">
+          <div class="card">
+            <img class="card-img-top" src="{{experiment.image}}" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{experiment.description}}</p>
+              <div>
+                <span class="badge badge-primary tag" *ngFor="let tag of experiment.tags">
+                  {{tag}}
+                </span>
+              </div>
+              <div class="github" [hidden]="!experiment.github">
+                <a href="{{experiment.github}}" target="_blank"><i class="devicon-github-plain colored"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="displayModal" tabindex="-1" role="dialog" aria-labelledby="displayModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="displayModalLabel">{{selectedExperiment.description}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <preview [height]="selectedExperiment.height" [path]="selectedExperiment.path"></preview>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row content">
     <div class="col-md-12 row title">COMPANIES I HAVE WORKED FOR</div>
-    <div class="work-experience col-md-12 row">
+    <div class="cards-section col-md-12 row">
       <div *ngFor="let job of jobs;" class="col-md-4">
         <div class="work-card">
           <div class="front">
@@ -27,7 +27,7 @@
   </div>
   <div class="row content">
     <div class="col-md-12 row title">TECHNOLOGIES I HAVE WORKED WITH</div>
-    <div class="skills col-md-12 row">
+    <div class="cards-section col-md-12 row">
       <div class="skill-box" *ngFor="let skill of skills;">
         <i class="devicon-{{skill.id}}-plain {{skill.class}}" [style.color]="skill.color"></i>
         <span class="skill-text" [style.background-color]="skill.color">{{skill.name}}</span>

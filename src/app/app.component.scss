@@ -8,3 +8,31 @@
   padding-top: 50px;
   margin-left: 250px;
 }
+
+@media screen and (max-width: 1250px) {
+  .main-body {
+    display: none;
+  }
+
+  .small-screen-msg {
+    display: flex;
+    height: 100vh;
+    font-size: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .message {
+      max-width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1250px){
+  .main-body {
+    display: block;
+  }
+
+  .small-screen-msg {
+    display: none;
+  }
+}

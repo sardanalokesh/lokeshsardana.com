@@ -13,12 +13,16 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.mediums = [{
+      id: "email",
+      url: "mailto:sardanalokesh@gmail.com",
+      class: "fa fa-envelope email"
+    }, {
       id: "linkedin",
       url: "https://linkedin.com/in/sardanalokesh"
-    }, {
+    }, /*{
       id: "facebook",
       url: "https://facebook.com/sardanalokesh"
-    }, {
+    },*/ {
       id: "twitter",
       url: "https://twitter.com/sardanalokesh"
     }, {

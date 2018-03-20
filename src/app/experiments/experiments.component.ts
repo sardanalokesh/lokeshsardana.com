@@ -46,7 +46,7 @@ export class ExperimentsComponent implements OnInit {
       image: "assets/images/fb-map.png",
       description: "Travel History",
       click: () => {
-        window.open("experiments/facebook/login.html", "_blank");
+        window.open("http://fb-geography.herokuapp.com/login.html", "_blank");
       },
       tags: ["JS", "Google Maps", "FB Graph API"]
     }, {

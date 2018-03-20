@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			circle {
+			  fill: #95e0f4;
+			  fill-opacity: .25;
+			  stroke: rgb(31, 119, 180);
+			  stroke-width: 1px;
+			}
+
+			.leaf circle {
+			  fill-opacity: 1;
+			}
+
+			text {
+			  font: 10px sans-serif;
+			  text-anchor: middle;
+			}
+
+			.chart-tooltip {
+				position: absolute;
+			    text-align: center;
+			    max-width: 300px;
+			    padding: 10px;
+			    font: 12px sans-serif;
+			    background-color: rgba(255, 255, 255, 0.9);
+			    border: 1px solid dodgerblue;
+			    border-radius: 3px;
+			    pointer-events: none;
+			}
+
+			.chart-tooltip .header {
+				font-weight: bold;
+			}
+
+			.chart-tooltip table {
+				text-align: left;
+			}
+
+
+		</style>
+		<script src="inventory-visualization/lib/d3.v4.min.js"></script>
+	</head>
+	<body style="text-align: center;">
+		<svg></svg>
+		<div class="chart-tooltip" style="opacity: 0;">
+	    	<div class="header"></div>
+	    	<div class="body"></div>
+	    </div>
+	    <script src="inventory-visualization/segments1.js"></script>
+		<script src="inventory-visualization/main.js"></script>
+	</body>
+</html>
